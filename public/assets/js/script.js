@@ -1,12 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
- Template Name:Surfside Media
- Template URI: surfsidemedia.in
- Description: Ecommerce Website Project
- Author: Surfside Media
- Author URI: https://www.surfsidemedia.in/
-
- ----------------------------------------------------------------------------------- */
 // 01.Tap to top js
 // 02.Image to background js
 // 03.menu js
@@ -710,7 +701,7 @@ $(document).mouseup(function (e) {
 /*=====================
     23. Feather js
  ==========================*/
-feather.replace();
+/* feather.replace(); */
 
 /*=====================
     24. header Dropdown js
@@ -719,3 +710,13 @@ $('.dropdown .dropdown-menu li').click(function () {
     $(this).parents('.dropdown').find('span').text($(this).text());
     $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
 });
+
+/*=====================
+    24. descreption select js
+ ==========================*/
+
+ $('#nav-speci-tab').on('click', function (e) {
+    e.preventDefault()
+    $('#nav-speci').tab('show')
+ })
+ 

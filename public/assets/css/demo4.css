@@ -4580,6 +4580,7 @@ header .main-navbar {
       [dir="rtl"] .right-side-contain .social-image + .social-image {
         margin-right: 30px;
         margin-left: 0; }
+        
 
 /* =====================
     Slick SLider CSS Start 
@@ -12328,6 +12329,40 @@ hr {
       .details-items .cloth-details-size .price-rating li:nth-child(3) {
         color: #009c00;
         font-weight: 600; }
+      /**=====================
+          r-price css start
+      ==========================**/ 
+      .r-price {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .r-price .main-price {
+        width: 100%;
+      }
+
+      .r-price .rating {
+        padding-left: auto;
+      }
+
+      .product-style-3.product-style-chair .product-title {
+        text-align: left;
+        width: 100%;
+      }
+
+      @media (max-width:600px) {
+
+        .product-box p,
+        .product-box a {
+            text-align: left;
+        }
+
+        .product-style-3.product-style-chair .main-price {
+            text-align: right !important;
+        }
+      }
+      
   .details-items .cloth-details-size .border-product {
     padding: 20px 0;
     border-top: 1px dashed #ddd; }
