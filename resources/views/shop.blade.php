@@ -44,7 +44,7 @@
                     <div class="accordion category-name" id="accordionExample">
                         <div class="accordion-item category-rating">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button btn-1" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo">
                                     Brand
                                 </button>
@@ -52,7 +52,7 @@
                             <div id="collapseTwo" class="accordion-collapse collapse show"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body category-scroll">
-                                    <ul class="category-list">
+                                    <ul class="category-list cat-1">
                                         @foreach ($brands as $brand)
                                         <li>
                                             <div class="form-check ps-0 custome-form-check">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
 
-                      {{--   <div class="accordion-item category-color">
+                   {{--      <div class="accordion-item category-color">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree">
@@ -131,13 +131,13 @@
 
                         <div class="accordion-item category-price">
                             <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button btn-2" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour">Price</button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse show"
                                 aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <div class="range-slider category-list">
+                                    <div class="range-slider category-list cat-2">
                                         <input type="text" class="js-range-slider" id="js-range-price" value="">
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@
 
                         <div class="accordion-item category-price">
                             <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button btn-3" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive">
                                     Size
                                 </button>
@@ -155,7 +155,7 @@
                             <div id="collapseFive" class="accordion-collapse collapse show"
                                 aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <ul class="category-list">
+                                    <ul class="category-list cat-3">
                                         <li>
                                             <a href="javascript:void(0)">xs</a>
                                         </li>
@@ -181,7 +181,7 @@
 
                         <div class="accordion-item category-rating">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button btn-4" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix">
                                     Category
                                 </button>
@@ -189,7 +189,7 @@
                             <div id="collapseSix" class="accordion-collapse collapse show"
                                 aria-labelledby="headingOne">
                                 <div class="accordion-body category-scroll">
-                                    <ul class="category-list">
+                                    <ul class="category-list cat-4">
                                         @foreach ($categories as $category)
                                         <li>
                                             <div class="form-check ps-0 custome-form-check">
@@ -207,7 +207,7 @@
 
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <button class="accordion-button btn-5" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSeven">
                                     Discount Range
                                 </button>
@@ -215,7 +215,7 @@
                             <div id="collapseSeven" class="accordion-collapse collapse show"
                                 aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <ul class="category-list">
+                                    <ul class="category-list cat-5">
                                         <li>
                                             <div class="form-check ps-0 custome-form-check">
                                                 <input class="checkbox_animated check-it" type="checkbox"
@@ -423,42 +423,3 @@
     <input type="hidden" name="categories" id="q_category" value="{{$q_categories}}">
 </form>
 @endsection
-
-@push('scripts')
-<script>
-    $("#pagesize").on('change', function(){
-        $("#size").val($("#pagesize option:selected").val());
-        $("#frmFilter").submit();
-    });
-    $("#orderby").on('change', function(){
-        $("#order").val($("#orderby option:selected").val());
-        $("#frmFilter").submit();
-    });
-
-    function filterProductsByBrand(brand) {
-    var brands = "";
-    $("input[name='brands']:checked").each(function() {
-        if (brands === "") {
-            brands += $(this).val();
-        } else {
-            brands += "," + $(this).val();
-        }
-    });
-    $("#q_brand").val(brands);
-    $("#frmFilter").submit();
-}
-function filterProductsByCategory(category) {
-    var categories = "";
-    $("input[name='categories']:checked").each(function() {
-        if (categories === "") {
-            categories += $(this).val();
-        } else {
-            categories += "," + $(this).val();
-        }
-    });
-    $("#q_category").val(categories);
-    $("#frmFilter").submit();
-}
-
-</script>
-@endpush

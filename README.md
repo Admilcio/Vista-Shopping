@@ -1,105 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Online Platform</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
+# E-Commerce Online Platform
 
-        header {
-            background-color: #343a40;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
+This project, developed with Laravel, JavaScript, MySQL, and CSS, is an E-Commerce Online Platform offering a comprehensive solution for managing products, categories, brands, and customer orders. Experience seamless product browsing, searching, and a user-friendly shopping cart system.
 
-        section {
-            margin: 2em;
-        }
+## Overview
 
-        h1, h2, h3 {
-            color: #343a40;
-        }
+This E-Commerce Online Platform provides a user-friendly interface and features organized product management. Users can effortlessly navigate through categories and brands, ensuring a pleasant shopping experience.
 
-        h2 {
-            border-bottom: 2px solid #343a40;
-            padding-bottom: 0.5em;
-        }
+## Features
 
-        h3 {
-            color: #007bff;
-        }
+### Product Management
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+- **Organization:** Organize products into categories and brands for easy navigation.
 
-        li {
-            margin-bottom: 0.5em;
-        }
+### User-friendly Interface
 
-        code {
-            background-color: #f8f9fa;
-            padding: 2px 5px;
-            border: 1px solid #dee2e6;
-            border-radius: 4px;
-        }
+- **Responsive Design:** Intuitive and responsive design for a seamless user experience.
+- **Simple Navigation:** Browse through products effortlessly.
 
-        pre {
-            background-color: #f8f9fa;
-            padding: 1em;
-            border: 1px solid #dee2e6;
-            border-radius: 4px;
-            overflow-x: auto;
-        }
+### Shopping Cart
 
-        blockquote {
-            border-left: 2px solid #007bff;
-            padding-left: 1em;
-            margin-left: 0;
-        }
+- **Add, Update, Remove:** Add products to the shopping cart, update quantities, and remove items.
 
-        a {
-            color: #007bff;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>E-Commerce Online Platform</h1>
-    </header>
+## Getting Started
 
-    <section>
-        <h2>Overview</h2>
-        <p>
-            This E-Commerce Online Platform, developed with Laravel, JavaScript, MySQL, and CSS,
-            offers a comprehensive solution for managing products, categories, brands, and customer orders.
-            Experience seamless product browsing, searching, and a user-friendly shopping cart system.
-        </p>
+Follow these steps to get the project up and running on your local machine:
 
-        <h2>Features</h2>
+1. Clone the repository: `git clone https://github.com/admilcio/vista-shopping`
+2. Navigate to the project directory: `cd e-commerce-platform`
+3. Install dependencies: `composer install`
+4. Set up your environment file: `cp .env.example .env`
+5. Generate application key: `php artisan key:generate`
+6. Configure your database in the `.env` file.
+7. Run database migrations: `php artisan migrate`
+8. Seed the database: `php artisan db:seed`
+9. Start the development server: `php artisan serve`
 
-        <h3>Product Management</h3>
-        <ul>
-            <li><strong>Organization:</strong> Organize products into categories and brands for easy navigation.</li>
-        </ul>
+Visit [http://localhost:8000](http://localhost:8000) in your browser to explore the E-Commerce Online Platform.
 
-        <h3>User-friendly Interface</h3>
-        <ul>
-            <li><strong>Responsive Design:</strong> Intuitive and responsive design for a seamless user experience.</li>
-            <li><strong>Simple Navigation:</strong> Browse through products effortlessly.</li>
-        </ul>
-
-        <h3>Shopping Cart</h3>
-        <ul>
-            <li><strong>Add, Update, Remove:</strong> Add products to the shopping cart, update quantities, and remove items.</li>
-        </ul>
+Feel free to customize the project according to your requirements and contribute to its development!
